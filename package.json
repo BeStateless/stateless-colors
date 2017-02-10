@@ -1,0 +1,24 @@
+{
+  "name": "stateless-colors",
+  "version": "1.0.0",
+  "description": "a color management module for stateless",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BeStateless/stateless-colors.git"
+  },
+  "keywords": [
+    "colors",
+    "stateless",
+    "palette"
+  ],
+  "author": "Emma Ramirez <ramirez.emma.g@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BeStateless/stateless-colors/issues"
+  },
+  "homepage": "https://github.com/BeStateless/stateless-colors#readme"
+}
