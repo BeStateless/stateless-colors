@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "npm test",
-    "build": "tsc webpack.config.ts && webpack"
+    "build": "tsc webpack.config.ts && webpack",
+    "build:watch": "tsc webpack.config.ts && webpack --watch --progress --colors"
   },
   "repository": {
     "type": "git",
