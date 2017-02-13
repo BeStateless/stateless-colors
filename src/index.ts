@@ -1,13 +1,10 @@
 import { oceanDark } from './themes/oceanDark';
+import { ColorsOptions, theme } from './interfaces';
 
-interface ColorsOptions {
-  theme: string;
-}
-
-export const colors = (options:ColorsOptions = { theme: 'Ocean Dark' }) => {
+export const colors = (options:ColorsOptions = { theme: 'Ocean Dark' as theme }) => {
   this.theme = options.theme;
   switch (this.theme) {
-    case 'Ocean Dark':
+    case 'Ocean Dark' as theme:
       return oceanDark;
     default:
       throw new Error ('An unrecognized theme was selected.');

@@ -4,7 +4,7 @@ interface IColor {
   color: string;
 }
 
-const Color = (color) => {
+export const Color = (color:string) => {
   this.color = color;
 
   return this;
@@ -19,3 +19,6 @@ Color.prototype.lighten = (percentage: number) => {
   this.color = lighten(this.color, percentage);
   return this;
 };
+
+
+export default Color;
