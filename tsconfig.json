@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "noLib": false,
+        "jsx": "react",
+        "experimentalDecorators": true,
+        "allowJs": true,
+        "lib": ["es6", "node"]
+    },
+    "exclude": [
+      "node_modules",
+      "typings"
+    ],
+    "compileOnSave": false
+}

@@ -1,8 +1,8 @@
 {
-  "name": "stateless-colors",
-  "version": "1.0.0",
-  "description": "a color management module for stateless",
-  "main": "index.js",
+  "name": "@stateless/colors",
+  "version": "0.0.1",
+  "description": "a color management and manipulation module for stateless",
+  "main": "dist/index.js",
   "scripts": {
     "test": "npm test"
   },
@@ -13,12 +13,17 @@
   "keywords": [
     "colors",
     "stateless",
-    "palette"
+    "palette",
+    "color manipulation"
   ],
-  "author": "Emma Ramirez <ramirez.emma.g@gmail.com>",
+  "author": "Emma Ramirez <ramirez.emma.g@gmail.com> emmaramirez.me",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/BeStateless/stateless-colors/issues"
   },
-  "homepage": "https://github.com/BeStateless/stateless-colors#readme"
+  "homepage": "https://github.com/BeStateless/stateless-colors#readme",
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.0.4-rc.2",
+    "webpack": "^2.2.1"
+  }
 }
