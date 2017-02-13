@@ -31,23 +31,25 @@ import { colors, lightTheme } from '@stateless/colors';
 
 ## API
 
-### `colors(options).[name](options)`
+### `colors.[name]`
 
-Returns, as a string, the color of the specified name. Names can be a specific color from a palette (i.e. navyBlue), or an Element/Component type (i.e. headerColor, headerTextColor, footerColor). As you can see, the background is specified by `[name][textColor|Color]`, with some potential editions. On SVGs, `Color` is analogous to the `fill` property.
-
-#### colors options
-
-- Theme [a theme type] default: 'Ocean Dark'
+Returns, as a string, the color of the specified name. Names can be a specific color from a palette (i.e. navyBlue), or an Element/Component type (i.e. headerBackground, headerText, logoColor).
 
 
-#### name options
 
-- returnType ['hex', 'rgb', 'rgba', 'hsl', 'hsla', or 'hwb'] default: 'hex'
-
-
-### `color.darken(percentage)`
+### `darken(color, percentage)`
 
 Returns a new color darkened by the percentage requested. Returns the same type as the original.
+
+### `lighten(color, percentage)`
+
+### `saturate(color, percentage)`
+
+### `rgb(hex)`
+
+### `rgba(hex, alpha)`
+
+
 
 
 ## Contributing
