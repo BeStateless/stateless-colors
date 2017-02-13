@@ -14,7 +14,7 @@ npm install --save @stateless/colors
 
 If you want to build your own copy, git clone and then run `npm i`, `npm run build`.
 
-**IMPORTANT**: make sure to shrinkwrap or stay consistent with which package you choose. A breaking-change semver-wise for this project is when any value changes its color, or the color itself changes.
+⚠️️ **IMPORTANT**: make sure to shrinkwrap or stay consistent with which package you choose. A breaking-change semver-wise for this project is when any value changes its color, or the color itself changes.
 
 ### Importing
 
