@@ -2,17 +2,17 @@ const webpack = require('webpack');
 const path = require('path');
 
 const config = {
-  entry: path.resolve(__dirname, '/src/index.js)',
+  entry: './src/index.ts',
   devtool: 'source-map',
   output: {
-    path: path.resolve(__dirname, '/src'),
-    filename: outputFile,
-    library: 'colors.js',
+    path: 'dist',
+    filename: 'colors.js',
+    library: '@stateless/colors',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
-  rules: {
-    loaders: [
+  module: {
+    rules: [
       {
         test: /\.ts$/,
         loader: 'awesome-typescript-loader',
@@ -26,8 +26,7 @@ const config = {
     ]
   },
   resolve: {
-    root: path.resolve('./src'),
-    extensions: ['', '.ts']
+    extensions: ['.ts', '.js']
   }
 };
 

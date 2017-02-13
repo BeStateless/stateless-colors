@@ -8,8 +8,7 @@
         "noLib": false,
         "jsx": "react",
         "experimentalDecorators": true,
-        "allowJs": true,
-        "lib": ["es6", "node"]
+        "allowJs": true
     },
     "exclude": [
       "node_modules",
