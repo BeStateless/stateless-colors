@@ -1,4 +1,4 @@
-import { darken } from './manipulation';
+import { darken, lighten } from '../manipulation';
 
 interface IColor {
   color: string;
@@ -11,6 +11,11 @@ const Color = (color) => {
 };
 
 Color.prototype.darken = (percentage: number) => {
-  this.color = darken(color, percentage);
+  this.color = darken(this.color, percentage);
+  return this;
+};
+
+Color.prototype.lighten = (percentage: number) => {
+  this.color = lighten(this.color, percentage);
   return this;
 };
