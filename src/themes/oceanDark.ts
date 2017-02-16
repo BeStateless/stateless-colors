@@ -1,4 +1,5 @@
 import { Color } from '../color';
+import { lighten } from '../manipulation/lighten';
 
 const metadata = {
   info: 'Ocean Dark is a terrible name for a theme',
@@ -15,6 +16,8 @@ const palette = {
 };
 
 const theme = {
+  dashboardBackground: lighten(palette.navyBlue, 10),
+
   headerBackground: palette.navyBlue,
   headerText: palette.lightGray,
 };

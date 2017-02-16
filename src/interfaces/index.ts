@@ -31,3 +31,5 @@ export interface HSLColorObject {
   l: number;
   a?: number;
 }
+
+export type colorFormat = 'hex' | 'rgb' | 'rgba' | 'hsl' | 'hsla';
