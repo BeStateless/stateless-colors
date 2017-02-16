@@ -17,3 +17,17 @@ export interface Theme {
   headerBackground?: color;
   headerText?: color;
 }
+
+export interface RGBColorObject {
+  r: number;
+  g: number;
+  b: number;
+  a?: number;
+}
+
+export interface HSLColorObject {
+  h: number;
+  s: number;
+  l: number;
+  a?: number;
+}
