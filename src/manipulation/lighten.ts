@@ -1,3 +1,9 @@
+
+const convertPercentageToDecimal = (percentage:string) => {
+  return parseInt(percentage.replace(/\%/g, '')) / 100;
+};
+
 export const lighten = (color, percentage) => {
-  return color;
+  const amount = typeof percentage === 'string' ? convertPercentageToDecimal(percentage) : percentage;
+  
 };

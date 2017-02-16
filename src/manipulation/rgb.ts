@@ -3,6 +3,8 @@ import { RGBColorObject } from '../interfaces';
 
 export const rgb = (hex:string):string => `rgb(${hexToR(hex)}, ${hexToG(hex)}, ${hexToB(hex)})`;
 
+export const rgba = (hex:string, alpha:number):string => `rgb(${hexToR(hex)}, ${hexToG(hex)}, ${hexToB(hex)}, ${alpha})`;
+
 export const rgbToObject = (rgb:string):RGBColorObject => {
   const rgbArray:string[] = rgb.split(',').map((item, index) => {
     return item.replace(/\D/g, '');
