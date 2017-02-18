@@ -4,10 +4,9 @@
   "description": "a color management and manipulation module for stateless",
   "main": "dist/index.js",
   "scripts": {
-    "test": "npm test",
+    "test": "tsc -p . && mocha",
     "build": "tsc webpack.config.ts && webpack",
-    "build:watch": "tsc webpack.config.ts && webpack --watch --progress --colors",
-    "test": "mocha -r ts-node/register test/**/*.ts"
+    "build:watch": "tsc webpack.config.ts && webpack --watch --progress --colors"
   },
   "repository": {
     "type": "git",
@@ -30,6 +29,9 @@
     "@types/mocha": "^2.2.39",
     "@types/node": "^7.0.5",
     "awesome-typescript-loader": "^3.0.4-rc.2",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "mocha-typescript": "^1.0.21",
     "tslint": "^4.4.2",
     "tslint-loader": "^3.4.2",
     "typescript": "^2.1.6",

@@ -1,4 +1,5 @@
 import { Color } from '../color';
+import { rgbToHsl, rgbToHslObject } from '../manipulation/hsl';
 import { lighten } from '../manipulation/lighten';
 
 const metadata = {
@@ -16,7 +17,7 @@ const palette = {
 };
 
 const theme = {
-  dashboardBackground: lighten(palette.navyBlue, 10),
+  dashboardBackground: lighten(rgbToHslObject(palette.navyBlue), 10),
 
   headerBackground: palette.navyBlue,
   headerText: palette.lightGray,

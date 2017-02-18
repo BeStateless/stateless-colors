@@ -5,6 +5,8 @@ npm-debug.log*
 
 webpack.config.js
 ./webpack.config.js
+*.js
+**/*.js
 
 dist
 ./dist

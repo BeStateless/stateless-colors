@@ -12,7 +12,8 @@
     },
     "exclude": [
       "node_modules",
-      "typings"
+      "typings",
+      "dist"
     ],
     "compileOnSave": false
 }
