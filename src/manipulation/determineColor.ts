@@ -1,11 +1,11 @@
 import { colorFormat } from '../interfaces';
 
 export const determineColorFormat = (color:string):colorFormat => {
-  if (color.split(',').length === 1) {
+  if (/#/.test(color)) {
     return 'hex';
-  } else if (color.match(/^\/rgb/) !== null) {
+  } else if (/rgb/.test(color)) {
     return 'rgb';
-  } else if (color.match(/^\/hsl/) !== null) {
+  } else if (/hsl/.test(color)) {
     return 'hsl';
   };
 };
