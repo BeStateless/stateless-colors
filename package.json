@@ -6,7 +6,8 @@
   "scripts": {
     "test": "tsc -p . && mocha",
     "build": "tsc webpack.config.ts && webpack",
-    "build:watch": "tsc webpack.config.ts && webpack --watch --progress --colors"
+    "build:watch": "tsc webpack.config.ts && webpack --watch --progress --colors",
+    "posttest": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec"
   },
   "repository": {
     "type": "git",
