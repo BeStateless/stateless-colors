@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npm test",
     "build": "tsc webpack.config.ts && webpack",
-    "build:watch": "tsc webpack.config.ts && webpack --watch --progress --colors"
+    "build:watch": "tsc webpack.config.ts && webpack --watch --progress --colors",
+    "test": "mocha -r ts-node/register test/**/*.ts"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,8 @@
   },
   "homepage": "https://github.com/BeStateless/stateless-colors#readme",
   "devDependencies": {
+    "@types/chai": "^3.4.35",
+    "@types/mocha": "^2.2.39",
     "@types/node": "^7.0.5",
     "awesome-typescript-loader": "^3.0.4-rc.2",
     "tslint": "^4.4.2",
