@@ -10,4 +10,8 @@ import { expect } from 'chai';
   @test 'default equals default theme'() {
     expect(Color.result).equals(oceanDark);
   }
+
+  @test 'dashboard text is correct color'() {
+    expect(Color.result.dashboardText).equals('#fff');
+  }
 }
