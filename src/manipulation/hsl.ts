@@ -42,15 +42,31 @@ export const rgbObjectToHslObject = (rgb:RGBColorObject):HSLColorObject => {
   };
 };
 
+
 export const hslObjectToString = (hsl:HSLColorObject):string => {
   return `hsla(${hsl.h}, ${hsl.s}, ${hsl.l}, ${hsl.a || 1})`;
 };
 
-export const toHSL = (color, objectOrString: 'object' | 'string' = 'object') => {
+export const toHSL = (color:string, objectOrString: Object | string  = 'object') => {
+  const format = determineColorFormat(color);
   if (objectOrString === 'object') {
-
+    switch (format) {
+      case 'hex':
+        break;
+      case 'rgb':
+        break;
+      case 'hsl':
+        return color;
+    }
   }
   if (objectOrString === 'string') {
-
+    switch (format) {
+      case 'hex':
+        break;
+      case 'rgb':
+        break;
+      case 'hsl':
+        return hslObjectToString(color);
+    }
   }
 };

@@ -1,6 +1,7 @@
 import { darken, lighten } from '../manipulation';
 import { RGBColorObject } from '../interfaces';
 
+
 interface IColor {
   color: string;
 }
