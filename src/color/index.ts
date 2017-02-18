@@ -1,29 +1,30 @@
-import { darken, lighten } from '../manipulation';
-import { RGBColorObject } from '../interfaces';
+import { darken, lighten, determineColorFormat, rgbToObject } from '../manipulation';
+import { RGBColorObject, HSLColorObject } from '../interfaces';
 
-
-interface IColor {
-  color: string;
-}
-
-type colorType = string | RGBColorObject;
 
 
 export const Color = (color:string) => {
   this.color = color;
+  this.toObject = (objectType: 'rgb' | 'rgba' | 'hsl' | 'hsla'):RGBColorObject | HSLColorObject => {
+    const format = determineColorFormat(this.color);
+    if (format === 'rgb') {
+      if (objectType === 'rgb') {
+        this.color = rgbToObject(this.color);
+      }
+    }
 
-  return this.color;
+
+    return this;
+  };
+  this.darken = (percentage: number) => {
+    this.color = darken(this.color, percentage);
+    return this;
+  };
+
+  return this;
 };
 
-Color.prototype.darken = (percentage: number) => {
-  this.color = darken(this.color, percentage);
-  return this.color;
-};
 
-Color.prototype.lighten = (percentage: number) => {
-  this.color = lighten(this.color, percentage);
-  return this.color;
-};
 
 
 export default Color;

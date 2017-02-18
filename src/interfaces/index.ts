@@ -9,8 +9,8 @@ export type color = string;
 export type brightness = 'dark' | 'light';
 
 export interface Metadata {
-  info: string;
-  brightness: brightness;
+  info?: string;
+  brightness?: brightness;
 }
 
 export interface Theme {

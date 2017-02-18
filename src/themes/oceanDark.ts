@@ -18,7 +18,7 @@ const palette = {
 
 const theme = {
   dashboardBackground: lighten(rgbToHslObject(palette.navyBlue), 10),
-
+  dashboardText: Color(palette.white).color,
   headerBackground: palette.navyBlue,
   headerText: palette.lightGray,
 };
