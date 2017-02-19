@@ -7,5 +7,7 @@ export const determineColorFormat = (color:string):colorFormat => {
     return 'rgb';
   } else if (/hsl/.test(color)) {
     return 'hsl';
-  };
+  } else {
+    throw new Error();
+  }
 };

@@ -14,4 +14,13 @@ import { determineColorFormat } from '../src/manipulation';
     const subject = determineColorFormat('rgb(12, 33, 5)');
     expect(subject).equals('rgb');
   }
+
+  @test 'it can detect hsl'() {
+    const subject = determineColorFormat('hsl(120, 40%, 0%)');
+    expect(subject).equals('hsl');
+  }
+
+  @test 'it should throw if no match is found'() {
+    expect(() => { determineColorFormat('failure'); }).to.throw(Error);
+  }
 }
