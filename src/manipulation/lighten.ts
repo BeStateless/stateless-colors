@@ -11,7 +11,7 @@ export const lighten = (color:HSLColorObject, percentage):HSLColorObject => {
   return {
     h: color.h,
     s: color.s,
-    l: color.l,
+    l: newLight,
     a: color.a
   };
 };
