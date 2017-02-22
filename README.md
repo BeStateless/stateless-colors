@@ -11,7 +11,7 @@ The purpose of this module is to not have to search through documentation or any
 ## Installation
 
 ```
-npm install --save @stateless/colors
+npm install --save stateless-colors
 ```
 
 If you want to build your own copy, git clone and then run `npm i`, `npm run build`.
@@ -23,11 +23,11 @@ If you want to build your own copy, git clone and then run `npm i`, `npm run bui
 The project currently accepts ES6-styled imports, i.e.
 
 ```javascript
-import '@stateless/colors';
+import 'stateless-colors';
 
-import { colors } from '@stateless/colors';
+import { colors } from 'stateless-colors';
 
-import { colors, lightTheme } from '@stateless/colors';
+import { colors, lightTheme } from 'stateless-colors';
 ```
 
 
