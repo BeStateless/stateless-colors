@@ -1,5 +1,6 @@
 # Stateless Colors ✨
 
+[![npm version](https://badge.fury.io/js/stateless-colors.svg)](https://badge.fury.io/js/stateless-colors)
 [ ![Codeship Status for BeStateless/stateless-colors](https://app.codeship.com/projects/8ba90230-db79-0134-7718-125507c76e50/status?branch=master)](https://app.codeship.com/projects/204044) [![codecov](https://codecov.io/gh/BeStateless/stateless-colors/branch/master/graph/badge.svg)](https://codecov.io/gh/BeStateless/stateless-colors)
 
 **WIP**
@@ -49,22 +50,35 @@ Examples
 colors().headerText
 colors('Spring Breeze').headerText
 colors('Tomorrow').info
+const theme = colors('Desert Night');
+background.style.background = theme.bodyBackground;
 ```
-
 
 ### `colors(options).[name].[function]`
 
-You can chain a number of manipulation functions to the colors that stateless-colors emits:
+You can chain a number of manipulation functions to the colors that stateless-colors emits.
+
+⚠️ note: For now, when chaining methods, you'll have to append it by calling color.
+
+### `Color(colorName)`
+
+A wrapper around colors that adds multiple methods. Each color in colors is simply calling the `color` property of `Color`.
 
 #### `lighten(percentage)`
 
+Returns a lightened version of the color.
+
 #### `darken(percentage)`
+
+Returns a darkened version of the color.
 
 #### `saturate(percentage)`
 
+Returns a saturated version of the color.
+
 #### `desaturate(percentage)`
 
-
+Returns a desaturated version of the color.
 
 
 ## Contributing
