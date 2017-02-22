@@ -31,11 +31,36 @@ import { colors, lightTheme } from '@stateless/colors';
 
 ## API
 
-### `colors.[name]`
+### `colors(options).[name]`
+
+```javascript
+@options Object { theme }
+@name identifiers
+```
 
 Returns, as a string, the color of the specified name. Names can be a specific color from a palette (i.e. navyBlue), or an Element/Component type (i.e. headerBackground, headerText, logoColor).
+You can also call metadata about the colors.
 
-### `colors.[name]`
+Examples
+
+```javascript
+colors().headerText
+colors('Spring Breeze').headerText
+colors('Tomorrow').info
+```
+
+
+### `colors(options).[name].[function]`
+
+You can chain a number of manipulation functions to the colors that stateless-colors emits:
+
+#### `lighten(percentage)`
+
+#### `darken(percentage)`
+
+#### `saturate(percentage)`
+
+#### `desaturate(percentage)`
 
 
 
