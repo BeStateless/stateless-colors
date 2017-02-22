@@ -1,6 +1,6 @@
 # Stateless Colors ✨
 
-[![codecov](https://codecov.io/gh/BeStateless/stateless-colors/branch/master/graph/badge.svg)](https://codecov.io/gh/BeStateless/stateless-colors)
+[ ![Codeship Status for BeStateless/stateless-colors](https://app.codeship.com/projects/8ba90230-db79-0134-7718-125507c76e50/status?branch=master)](https://app.codeship.com/projects/204044) [![codecov](https://codecov.io/gh/BeStateless/stateless-colors/branch/master/graph/badge.svg)](https://codecov.io/gh/BeStateless/stateless-colors)
 
 **WIP**
 
