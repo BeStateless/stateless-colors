@@ -1,5 +1,5 @@
 import { HSLColorObject } from '../interfaces';
-import { convertPercentageToDecimal } from '../utils';
+import { convertPercentageToDecimal } from './utils';
 
 export const saturate = (color:HSLColorObject, percentage):HSLColorObject => {
   const amount = typeof percentage === 'string' ? convertPercentageToDecimal(percentage) : percentage;

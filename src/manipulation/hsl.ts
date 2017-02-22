@@ -1,5 +1,5 @@
 import { RGBColorObject, HSLColorObject, colorFormat } from '../interfaces';
-import { rgbToObject } from './rgb';
+import { rgbToObject, rgb } from './rgb';
 import { determineColorFormat } from './determineColor';
 
 export const rgbToHsl = (r, g, b) => {
@@ -43,8 +43,12 @@ export const rgbObjectToHslObject = (rgb:RGBColorObject):HSLColorObject => {
   };
 };
 
-export const rgbToHslObject = (rgb:string):HSLColorObject => {
-  return rgbObjectToHslObject(rgbToObject(rgb));
+export const hexToHSLObject = (hex:string):HSLColorObject => {
+  return rgbToHslObject(rgb(hex));
+};
+
+export const rgbToHslObject = (rgbString:string):HSLColorObject => {
+  return rgbObjectToHslObject(rgbToObject(rgbString));
 };
 
 
