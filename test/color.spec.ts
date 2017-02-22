@@ -25,4 +25,24 @@ import { Color } from '../src/color';
     }).darken(0.3).color;
     expect(subject.l).equals(10);
   }
+
+  @test '#Color lighten'() {
+    const subject = Color({
+      h: 120,
+      s: 30,
+      l: 40,
+      a: 1
+    }).lighten(0.3).color;
+    expect(subject.l).equals(70);
+  }
+
+  @test '#Color lighten out of bounds'() {
+    const subject = Color({
+      h: 120,
+      s: 30,
+      l: 80,
+      a: 1
+    }).lighten(0.3).color;
+    expect(subject.l).equals(100);
+  }
 }

@@ -23,7 +23,8 @@ const theme = {
   headerBackground: Color(palette.navyBlue).color,
   headerText: Color(palette.white).color,
   menuBackground: Color(palette.purple).color,
-  menuText: Color(palette.white).color
+  menuText: Color(palette.white).color,
+  logoFill: Color(palette.neonGreen).color,
 };
 
 export const oceanDark = { ...metadata, ...palette, ...theme };
