@@ -1,5 +1,7 @@
 # Stateless Colors ✨
 
+[![codecov](https://codecov.io/gh/BeStateless/stateless-colors/branch/master/graph/badge.svg)](https://codecov.io/gh/BeStateless/stateless-colors)
+
 **WIP**
 
 A tiny palette manager and color manipulation tool for Stateless.
