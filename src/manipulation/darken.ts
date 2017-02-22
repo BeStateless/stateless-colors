@@ -3,7 +3,7 @@ import { convertPercentageToDecimal } from './utils';
 
 export const darken = (color:HSLColorObject, percentage):HSLColorObject => {
   const amount = typeof percentage === 'string' ? convertPercentageToDecimal(percentage) : percentage;
-  let newDarkness = color.l - (amount * 100);
+  let newDarkness:number = clamp(color.l - (amount * 100), 0, 100);
   return {
     h: color.h,
     s: color.s,
