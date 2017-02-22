@@ -3,11 +3,14 @@
 [![npm version](https://badge.fury.io/js/stateless-colors.svg)](https://badge.fury.io/js/stateless-colors)
 [ ![Codeship Status for BeStateless/stateless-colors](https://app.codeship.com/projects/8ba90230-db79-0134-7718-125507c76e50/status?branch=master)](https://app.codeship.com/projects/204044) [![codecov](https://codecov.io/gh/BeStateless/stateless-colors/branch/master/graph/badge.svg)](https://codecov.io/gh/BeStateless/stateless-colors)
 
-**WIP**
-
 A tiny palette manager and color manipulation tool for Stateless.
 
-The purpose of this module is to not have to search through documentation or anything of the like when it comes to styling Stateless products. It reduces the friction when allowing the user to switch between themes by allowing all background/color properties to be specified in javascript.
+**Features** 😍
+
+- Flexible access to color palettes & themes for projects
+- Manipulate any color, any way, into any format
+- Track how you use colors in your repo more efficiently by centralizing design components
+- Works seamlessly with whatever--React, Angular, plain JS
 
 ## Installation
 
@@ -58,7 +61,7 @@ background.style.background = theme.bodyBackground;
 
 You can chain a number of manipulation functions to the colors that stateless-colors emits.
 
-⚠️ note: For now, when chaining methods, you'll have to append it by calling color.
+**note**: For now, when chaining methods, you'll have to append it by calling color.
 
 ### `Color(colorName)`
 
