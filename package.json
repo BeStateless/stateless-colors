@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "tsc -p . && mocha",
+    "clean": "rm -rf dist",
     "build": "tsc webpack.config.ts && webpack",
     "build:watch": "tsc webpack.config.ts && webpack --watch --progress --colors",
     "posttest": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec"
