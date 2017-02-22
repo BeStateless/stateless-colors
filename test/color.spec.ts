@@ -17,7 +17,12 @@ import { Color } from '../src/color';
   }
 
   @test '#Color.darken'() {
-    const subject = Color('#000').darken(0.3).color;
-    expect(subject).equals('#000');
+    const subject = Color({
+      h: 120,
+      s: 30,
+      l: 40,
+      a: 1
+    }).darken(0.3).color;
+    expect(subject.l).equals(10);
   }
 }
