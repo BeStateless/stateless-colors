@@ -8,6 +8,8 @@ export type color = string;
 
 export type brightness = 'dark' | 'light';
 
+export type percentage = number | string;
+
 export interface Metadata {
   info?: string;
   brightness?: brightness;

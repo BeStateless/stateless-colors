@@ -22,6 +22,8 @@ const theme = {
   dashboardText: Color(palette.white).color,
   headerBackground: Color(palette.navyBlue).color,
   headerText: Color(palette.white).color,
+  menuBackground: Color(palette.purple).color,
+  menuText: Color(palette.white).color
 };
 
-export const oceanDark = { ...palette, ...theme };
+export const oceanDark = { ...metadata, ...palette, ...theme };

@@ -1,11 +1,12 @@
 import { darken, lighten, determineColorFormat, rgbToObject, hexToHSLObject, desaturate, saturate } from '../manipulation';
-import { RGBColorObject, HSLColorObject } from '../interfaces';
+import { RGBColorObject, HSLColorObject, percentage } from '../interfaces';
 
 
 
 export const Color = (color:string | HSLColorObject | RGBColorObject) => {
   this.color = color;
   this.toObject = (objectType: 'rgb' | 'rgba' | 'hsl' | 'hsla'):RGBColorObject | HSLColorObject => {
+    if (typeof this.color === 'object') return;
     const format = determineColorFormat(this.color);
     if (format === 'rgb') {
       if (objectType === 'rgb') {
@@ -20,19 +21,19 @@ export const Color = (color:string | HSLColorObject | RGBColorObject) => {
 
     return this;
   };
-  this.darken = (percentage: number) => {
+  this.darken = (percentage: percentage) => {
     this.color = darken(this.color, percentage);
     return this;
   };
-  this.lighten = (percentage: number) => {
+  this.lighten = (percentage: percentage) => {
     this.color = lighten(this.color, percentage);
     return this;
   };
-  this.saturate = (percentage: number) => {
+  this.saturate = (percentage: percentage) => {
     this.color = saturate(this.color, percentage);
     return this;
   };
-  this.desaturate = (percentage: number) => {
+  this.desaturate = (percentage: percentage) => {
     this.color = desaturate(this.color, percentage);
     return this;
   };
