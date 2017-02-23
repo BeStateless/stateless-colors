@@ -44,17 +44,17 @@ export const rgbObjectToHslObject = (rgb:RGBColorObject):any => {
 };
 
 /* TODO: Fix temporary workaround */
-// export const hslToObject = (hsl:string):any => {
-//   const hslArray:string[] = hsl.split(',').map((item, index) => {
-//     return item.replace(/[a-z()%]/gi, '');
-//   });
-//   return {
-//     h: parseInt(hslArray[0]),
-//     s: parseInt(hslArray[1]),
-//     l: parseInt(hslArray[2]),
-//     a: parseFloat(hslArray[3]) || 1
-//   };
-// };
+export const hslToObject = (hsl:string):HSLColorObject => {
+  const hslArray:string[] = hsl.split(',').map((item, index) => {
+    return item.replace(/[a-z()%]/gi, '');
+  });
+  return {
+    h: parseInt(hslArray[0]),
+    s: parseInt(hslArray[1]),
+    l: parseInt(hslArray[2]),
+    a: parseFloat(hslArray[3]) || 1
+  };
+};
 
 export const hexToHSLObject = (hex:string):HSLColorObject => {
   return rgbToHslObject(rgb(hex));
