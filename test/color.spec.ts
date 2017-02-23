@@ -9,6 +9,7 @@ import { Color } from '../src/color';
     expect(subject).equals('#0f0f0f');
   }
 
+
   @test '#Color.toObject'() {
     const subject = Color('rgb(233, 69, 33)').toObject('rgb').color;
     expect(subject.r).equals(233);

@@ -3,8 +3,13 @@ import { RGBColorObject, HSLColorObject, percentage } from '../interfaces';
 
 
 
-export const Color = (color:string | HSLColorObject | RGBColorObject) => {
+export const Color = (color:string | HSLColorObject | RGBColorObject):any => {
   this.color = color;
+
+  if (color instanceof Color) {
+    return color;
+  }
+
   this.toObject = (objectType: 'rgb' | 'rgba' | 'hsl' | 'hsla'):RGBColorObject | HSLColorObject => {
     if (typeof this.color === 'object') return;
     const format = determineColorFormat(this.color);
@@ -20,6 +25,8 @@ export const Color = (color:string | HSLColorObject | RGBColorObject) => {
     }
 
     return this;
+
+    //return this;
   };
   this.darken = (percentage: percentage) => {
     this.color = darken(this.color, percentage);

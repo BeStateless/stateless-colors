@@ -14,7 +14,7 @@ const palette = {
   lightGray: '#eee',
   black: '#000',
   darkGray: '#222',
-  purple: '#6e1cc1'
+  purple: '#4f3179'
 };
 
 const theme = {
@@ -25,6 +25,7 @@ const theme = {
   menuBackground: Color(palette.purple).color,
   menuText: Color(palette.white).color,
   logoFill: Color(palette.neonGreen).color,
+  containerBackground: Color(palette.navyBlue).lighten(0.03).color,
 };
 
 export const oceanDark = { ...metadata, ...palette, ...theme };
