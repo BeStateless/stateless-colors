@@ -1,4 +1,12 @@
-import { darken, lighten, determineColorFormat, rgbToObject, hexToHSLObject, desaturate, saturate } from '../manipulation';
+import {
+  darken,
+  lighten,
+  determineColorFormat,
+  rgbToObject,
+  hexToHSLObject,
+  desaturate,
+  saturate
+} from '../manipulation';
 import { RGBColorObject, HSLColorObject, percentage } from '../interfaces';
 
 
@@ -25,8 +33,6 @@ export const Color = (color:string | HSLColorObject | RGBColorObject):any => {
     }
 
     return this;
-
-    //return this;
   };
   this.darken = (percentage: percentage) => {
     this.color = darken(this.color, percentage);

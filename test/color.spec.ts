@@ -27,7 +27,7 @@ import { Color } from '../src/color';
     expect(subject.l).equals(10);
   }
 
-  @test '#Color lighten'() {
+  @test '#Color.lighten'() {
     const subject = Color({
       h: 120,
       s: 30,
@@ -45,5 +45,25 @@ import { Color } from '../src/color';
       a: 1
     }).lighten(0.3).color;
     expect(subject.l).equals(100);
+  }
+
+  @test '#Color.saturate'() {
+    const subject = Color({
+      h: 120,
+      s: 25,
+      l: 33,
+      a: 1
+    }).saturate(0.5).color;
+    expect(subject.s).equals(75);
+  }
+
+  @test '#Color.desaturate'() {
+    const subject = Color({
+      h: 120,
+      s: 25,
+      l: 33,
+      a: 1
+    }).desaturate(0.15).color;
+    expect(subject.s).equal(10);
   }
 }
