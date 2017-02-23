@@ -14,5 +14,5 @@ export const colors = (options:ColorsOptions = {
   }
 };
 
-
+export * from './manipulation';
 export default colors;
