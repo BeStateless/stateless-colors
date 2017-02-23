@@ -34,7 +34,7 @@ import { Color } from '../src/color';
 
   @test '#Color.toHSL -- hex'() {
     const subject = Color('#8844FF').toHSL('string').color;
-    expect(subject).equals('hsla(262, 100%, 63%)');
+    expect(subject).equals('hsla(262, 100%, 63%, 1)');
   }
 
   @test '#Color.darken'() {
@@ -85,5 +85,20 @@ import { Color } from '../src/color';
       a: 1
     }).desaturate(0.15).color;
     expect(subject.s).equal(10);
+  }
+
+  @test 'Method chaining'() {
+    const subject = Color({
+      h: 120,
+      s: 45,
+      l: 33,
+      a: 1
+    }).lighten(0.4).desaturate(0.4).darken(0.2).color;
+    expect(subject).to.deep.equal({
+      h: 120,
+      s: 5,
+      l: 53,
+      a: 1
+    });
   }
 }
