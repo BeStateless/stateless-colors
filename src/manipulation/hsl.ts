@@ -3,41 +3,34 @@ import { rgbToObject, rgb } from './rgb';
 import { determineColorFormat } from './determineColor';
 
 export const rgbToHsl = (r, g, b, returnArray:boolean) => {
-  r /= 255,
-  g /= 255,
-  b /= 255;
+  r /= 255, g /= 255, b /= 255;
+   let max = Math.max(r, g, b), min = Math.min(r, g, b);
+   let h, s, l = (max + min) / 2;
 
-  const max = Math.max(r, g, b),
-        min = Math.min(r, b, b);
-
-  let h, s, l = (max + min) / 2;
-
-  if (max === min) {
-    h = s = 0;
-  } else {
-    const delta = max - min;
-    s = l > 0.5 ? delta / (2 - max - min) : delta / (max + min);
-    switch (max) {
-      case r:
-        h = (g - b) / delta + (g < b ? 6 : 0);
-        break;
-      case g:
-        h = (b - r) / delta + 2;
-        break;
-      case b:
-        h = (r - g) / delta + 4;
-        break;
-    }
-    h /= 6;
-  }
+   if (max === min) {
+       h = s = 0;
+   } else {
+       let d = max - min;
+       s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+       switch (max) {
+           case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+           case g: h = (b - r) / d + 2; break;
+           case b: h = (r - g) / d + 4; break;
+       }
+       h /= 6;
+   }
+   h = Math.floor(h * 360);
+   s = Math.floor(s * 100);
+   l = Math.floor(l * 100);
   if (returnArray)
-    return [h, Math.floor(s * 100), Math.floor(l * 100)];
+    return [h, s, l];
   else
     return `hsl(${h}, ${s}%, ${l}%)`;
 };
 
 export const rgbObjectToHslObject = (rgb:RGBColorObject):any => {
-  const hsl = rgbToHsl(rgb.r, rgb.b, rgb.b, true);
+  let hsl = rgbToHsl(rgb.r, rgb.b, rgb.b, true);
+  console.log(hsl);
   return {
     h: hsl[0],
     s: hsl[1],
