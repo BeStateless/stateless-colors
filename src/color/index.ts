@@ -34,6 +34,10 @@ export const Color = (color:string | HSLColorObject | RGBColorObject):any => {
 
     return this;
   };
+  this.toHSL = (objectType: 'object' | 'string') => {
+    this.color = toHSL(this.color, objectType);
+    return this;
+  };
   this.darken = (percentage: percentage) => {
     this.color = darken(this.color, percentage);
     return this;

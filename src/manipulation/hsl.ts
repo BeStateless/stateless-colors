@@ -69,14 +69,14 @@ export const hslObjectToString = (hsl:HSLColorObject):string => {
   return `hsla(${hsl.h}, ${hsl.s}%, ${hsl.l}%, ${hsl.a || 1})`;
 };
 
-export const toHSL = (color:string, objectOrString: Object | string  = 'object') => {
+export const toHSL = (color:string, objectOrString: 'object' | 'string'  = 'object'):HSLColorObject | string => {
   const format = determineColorFormat(color);
   if (objectOrString === 'object') {
     switch (format) {
       case 'hex':
-        break;
+        return hexToHSLObject(color);
       case 'rgb':
-        break;
+        return rgbToHslObject(color);
       case 'hsl':
         return color;
     }
@@ -84,11 +84,11 @@ export const toHSL = (color:string, objectOrString: Object | string  = 'object')
   if (objectOrString === 'string') {
     switch (format) {
       case 'hex':
-        break;
+        return hslObjectToString(hexToHSLObject(color));
       case 'rgb':
-        break;
+        return hslObjectToString(rgbToHslObject(color));
       case 'hsl':
-        break;
+        return color;
     }
   }
 };
