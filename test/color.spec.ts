@@ -32,6 +32,11 @@ import { Color } from '../src/color';
     });
   }
 
+  @test '#Color.toHSL -- hex'() {
+    const subject = Color('#8844FF').toHSL('string').color;
+    expect(subject).equals('hsla(262, 100%, 63%)');
+  }
+
   @test '#Color.darken'() {
     const subject = Color({
       h: 120,
