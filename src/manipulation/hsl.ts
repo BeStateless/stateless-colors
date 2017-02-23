@@ -30,10 +30,10 @@ export const rgbToHsl = (r, g, b) => {
     }
     h /= 6;
   }
-  return [h, s, l];
+  return `hsl(${h}, ${s}%, ${l}%)`;
 };
 
-export const rgbObjectToHslObject = (rgb:RGBColorObject):HSLColorObject => {
+export const rgbObjectToHslObject = (rgb:RGBColorObject):any => {
   const hsl = rgbToHsl(rgb.r, rgb.b, rgb.b);
   return {
     h: hsl[0],
@@ -42,6 +42,19 @@ export const rgbObjectToHslObject = (rgb:RGBColorObject):HSLColorObject => {
     a: rgb.a || 1
   };
 };
+
+/* TODO: Fix temporary workaround */
+// export const hslToObject = (hsl:string):any => {
+//   const hslArray:string[] = hsl.split(',').map((item, index) => {
+//     return item.replace(/[a-z()%]/gi, '');
+//   });
+//   return {
+//     h: parseInt(hslArray[0]),
+//     s: parseInt(hslArray[1]),
+//     l: parseInt(hslArray[2]),
+//     a: parseFloat(hslArray[3]) || 1
+//   };
+// };
 
 export const hexToHSLObject = (hex:string):HSLColorObject => {
   return rgbToHslObject(rgb(hex));
@@ -53,7 +66,7 @@ export const rgbToHslObject = (rgbString:string):HSLColorObject => {
 
 
 export const hslObjectToString = (hsl:HSLColorObject):string => {
-  return `hsla(${hsl.h}, ${hsl.s}, ${hsl.l}, ${hsl.a || 1})`;
+  return `hsla(${hsl.h}, ${hsl.s}%, ${hsl.l}%, ${hsl.a || 1})`;
 };
 
 export const toHSL = (color:string, objectOrString: Object | string  = 'object') => {
