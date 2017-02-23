@@ -2,7 +2,7 @@ import { RGBColorObject, HSLColorObject, colorFormat } from '../interfaces';
 import { rgbToObject, rgb } from './rgb';
 import { determineColorFormat } from './determineColor';
 
-export const rgbToHsl = (r, g, b) => {
+export const rgbToHsl = (r, g, b, returnArray:boolean) => {
   r /= 255,
   g /= 255,
   b /= 255;
@@ -30,11 +30,14 @@ export const rgbToHsl = (r, g, b) => {
     }
     h /= 6;
   }
-  return `hsl(${h}, ${s}%, ${l}%)`;
+  if (returnArray)
+    return [h, Math.floor(s * 100), Math.floor(l * 100)];
+  else
+    return `hsl(${h}, ${s}%, ${l}%)`;
 };
 
 export const rgbObjectToHslObject = (rgb:RGBColorObject):any => {
-  const hsl = rgbToHsl(rgb.r, rgb.b, rgb.b);
+  const hsl = rgbToHsl(rgb.r, rgb.b, rgb.b, true);
   return {
     h: hsl[0],
     s: hsl[1],
@@ -68,6 +71,8 @@ export const rgbToHslObject = (rgbString:string):HSLColorObject => {
 export const hslObjectToString = (hsl:HSLColorObject):string => {
   return `hsla(${hsl.h}, ${hsl.s}%, ${hsl.l}%, ${hsl.a || 1})`;
 };
+
+
 
 export const toHSL = (color:string, objectOrString: 'object' | 'string'  = 'object'):HSLColorObject | string => {
   const format = determineColorFormat(color);

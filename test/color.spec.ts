@@ -17,6 +17,21 @@ import { Color } from '../src/color';
     expect(subject.b).equals(33);
   }
 
+  @test '#Color.toHSL'() {
+    const subject = Color('rgb(255, 125, 36)').toHSL('string').color;
+    expect(subject).equals('hsla(24, 100%, 57%, 1)');
+  }
+
+  @test '#Color.toHSL -- object'() {
+    const subject = Color('rgb(255, 125, 36)').toHSL('object').color;
+    expect(subject).to.deep.equal({
+      h: 24,
+      s: 100,
+      l: 57,
+      a: 1
+    });
+  }
+
   @test '#Color.darken'() {
     const subject = Color({
       h: 120,

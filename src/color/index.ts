@@ -5,7 +5,8 @@ import {
   rgbToObject,
   hexToHSLObject,
   desaturate,
-  saturate
+  saturate,
+  toHSL
 } from '../manipulation';
 import { RGBColorObject, HSLColorObject, percentage } from '../interfaces';
 
